@@ -1,0 +1,53 @@
+:root {
+    --light: #dee2e6;
+    --gray: #adb5bd;
+    --base: #012a4a;
+    --light2: #f8f9fa;
+}
+
+.live-rates{
+    max-width: 850px;
+}
+
+.grid-info {
+    height: 40px;
+    background-color: var(--light);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.rate {
+    height: 50px;
+    border-bottom: 1px solid var(--gray);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.rate, .grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.currency {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.currency strong {
+    margin-left: 10px;
+}
+
+.base {
+    background-color: var(--base);
+    color: var(--light);
+}
+
+.add-rate {
+    background-color: var(--base);
+    color: var(--light-gray);
+    margin: 30px auto auto 50px;
+}
