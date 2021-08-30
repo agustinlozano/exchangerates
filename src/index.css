@@ -1,0 +1,48 @@
+:root {
+    --text: #323232;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color:var(--text);
+}
+
+section {
+    max-width: 850px;
+    height: 250px;
+    margin: 80px auto;
+}
+
+h2, h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+#hide {
+    display: none;
+}
+
+/* -------------------------------------------- */
+.round {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+:focus {
+    border: 1px solid var(--gray);
+}
