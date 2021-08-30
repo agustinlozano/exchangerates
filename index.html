@@ -1,15 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchange Rates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/converter.css">
+    <link rel="stylesheet" href="src/rates.css">
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
-    
+    <h1>Foreign Exchange Rates</h1>
+
+    <section>
+        <h2 id="hide">Currency Converter</h2>
+        <div class="converter">
+            <div class="grid-top-item">
+                <strong>Converter <i class="fas fa-coins"></i></strong>
+            </div>
+            <div class="grid-item">
+                <label for="amount">Amount</label>
+                <div>
+                    <input type="text" value="$1.00" class="grid-value">
+                </div>
+            </div>
+            <div class="grid-item">
+                <label for="from">From</label>
+                <div class="currency-input">
+                    <img src="src/img/estados-unidos.png" alt="US flag icon">
+                    <select class="ui dropdown grid-value">                            <!--Ejemplos-->
+                            <!--Ejemplos-->
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="ARS">ARS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-item">
+                <button class="swap-btn round"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+            <div class="grid-item">
+                <label for="to">To</label>
+                <div>
+                    <div class="currency-input">
+                        <img src="src/img/argentina.png" alt="US flag icon">
+                        <select class="ui dropdown grid-value">
+                            <!--Ejemplos-->
+                            <option value="USD">ARS</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="ARS">USD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <button class="convert-btn">Convert</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="live-rates">
+            <div class="grid-info">
+                <strong>Currency</strong>
+                <strong>Amount</strong>
+                <strong>+info</strong>
+            </div>
+            <div class="rates">
+                <div class="rate base">
+                    <!--Ejemplos-->
+                    <div class="currency">
+                        <img src="src/img/estados-unidos.png" alt="US flag icon">
+                        <strong>USD</strong>
+                    </div>
+                    <div class="amount">
+                        <strong>$1.00</strong>
+                    </div>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="rate">
+                    <div class="currency">
+                        <img src="src/img/reino-unido.png" alt="US flag icon">
+                        <strong>GBP</strong>
+                    </div>
+                    <div class="amount">
+                        <strong>$1.00</strong>
+                    </div>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="rate">
+                    <div class="currency">
+                        <img src="src/img/argentina.png" alt="US flag icon">
+                        <strong>ARS</strong>
+                    </div>
+                    <div class="amount">
+                        <strong>$1.00</strong>
+                    </div>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="rate">
+                    <div class="currency">
+                        <img src="src/img/union-europea.png" alt="US flag icon">
+                        <strong>EUR</strong>
+                    </div>
+                    <div class="amount">
+                        <strong>$1.00</strong>
+                    </div>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <button class="add-rate round"><i class="fas fa-plus-circle"></i></button>
+        </div>
+    </section>
+
     <script type="module" src="src/index.js"></script>
+    <script src="https://kit.fontawesome.com/b452f5c8e0.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
